@@ -1,31 +1,16 @@
 # Qardash AI
 
-Cleaned version without the leaked OpenRouter API key in `index.html`.
+Vercel-ready version.
 
-## Setup
+## Deploy
+1. Push this folder to GitHub.
+2. Import repo in Vercel.
+3. In Vercel → Project → Settings → Environment Variables add:
 
-1. Revoke/delete the old OpenRouter key immediately.
-2. Create a new OpenRouter API key.
-3. Open `config.js` and paste the new key:
-
-```js
-window.OPENROUTER_API_KEY = 'YOUR_NEW_KEY';
+```txt
+GROQ_API_KEY=your_groq_key
 ```
 
-4. Test locally by opening `index.html`.
+4. Redeploy.
 
-## GitHub push
-
-Because the old key was already committed before, start with clean git history:
-
-```bash
-rm -rf .git
-git init
-git add .
-git commit -m "clean first commit"
-git branch -M main
-git remote add origin https://github.com/shamiljafarov/qardash-ai.git
-git push -u origin main --force
-```
-
-Do not commit `config.js`.
+API key is stored server-side in `/api/chat.js`, not in the browser.

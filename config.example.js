@@ -1,1 +1,2 @@
-window.OPENROUTER_API_KEY = 'PASTE_YOUR_NEW_OPENROUTER_KEY_HERE';
+// Local-only example. Do not put real API keys in GitHub.
+// Production uses Vercel Environment Variable: GROQ_API_KEY
